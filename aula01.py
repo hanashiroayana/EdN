@@ -15,7 +15,7 @@ def receber_pessoa():
             idade = input("\nIdade: ").strip()
             profissao = input ("\nProfissão: ").strip()
             adicionar_pessoa(pessoas, nome, idade, profissao)
-            continua = input("Outra pessoa?(s/n):  ")
+            continua = input("Outra pessoa?(s/n):  ").strip().lower()
             if continua !="s":
                  break
     exibir_pessoas(pessoas)
