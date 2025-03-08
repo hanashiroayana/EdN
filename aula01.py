@@ -5,12 +5,19 @@ def adicionar_pessoa(lista, nome, idade, profissao):
 def exibir_pessoas(lista):
     print("Lista de pessoas cadastradas")
     for pessoa in lista:
-        print(f"Nome: {pessoa['nome']}, Idade: {pessoa['idade']}, Profissão: {pessoa['profissao']}")
+        print(f"Nome: {pessoa['nome']:<10}Idade: {pessoa['idade']:<5}Profissão: {pessoa['profissao']}")
 
-pessoas = []
+def receber_pessoa():
+    pessoas = []
+    start = input("***Vamos adicionar pessoas?***\nDigite s/n: ").strip().lower()
+    while start == "s":
+            nome = input("\nNome: ").strip()
+            idade = input("\nIdade: ").strip()
+            profissao = input ("\nProfissão: ").strip()
+            adicionar_pessoa(pessoas, nome, idade, profissao)
+            continua = input("Outra pessoa?(s/n):  ")
+            if continua !="s":
+                 break
+    exibir_pessoas(pessoas)
 
-
-adicionar_pessoa(pessoas, "Ana", 25, "Engenharia")
-adicionar_pessoa(pessoas, "Bruno", 30, "Engenheiro")
-adicionar_pessoa(pessoas, "Carla", 22, "Médica")
-
+receber_pessoa()
