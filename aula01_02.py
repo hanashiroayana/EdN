@@ -1,3 +1,4 @@
+#Revisão de funções 
 def adicionar_pessoa(lista, nome, idade, profissao):
     pessoa = {"nome": nome, "idade": idade, "profissao": profissao}
     lista.append(pessoa)

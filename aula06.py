@@ -3,9 +3,9 @@ def calcula_gorjeta(conta):
     return calculo_gorj
 
 def main():
-    conta = float(input("Qual o valor da conta?\n"))
+    conta = float(input("Qual o valor da conta? "))
     gorjeta = calcula_gorjeta(conta)
-    print(f"A gorjeta é: R${gorjeta:.2f}")
+    print(f"Para uma conta de R${conta:.2f}, a  gorjeta é de R${gorjeta:.2f}")
 
 if __name__ == "__main__":
     main()
