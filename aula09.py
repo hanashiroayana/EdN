@@ -1,8 +1,6 @@
 import requests 
 from datetime import datetime
 
-#Função main para interagir c o script (input)
-
 def obter_cotacao(moeda):
   url = f"https://economia.awesomeapi.com.br/last/{moeda}-BRL"
   try: 
